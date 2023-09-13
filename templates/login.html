@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="login" class="login">
+        <div class="container">
+
+            <div class="section-header">
+                <h2>Giriş Yap</h2>
+                {% load static %}
+                <form method="POST" action="{% url 'login' %}" class="login" id="login-form">
+                    {% csrf_token %}
+                    <div class="field">
+                        <input type="email" name="email" id="email" class="form-control"
+                               placeholder="E-Post Adresiniz" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" name="password" id="password" class="form-control"
+                               placeholder="Şifreniz" required>
+                    </div>
+                    <div class="pass-link"><a href="{% url 'forget-password' %}">Şifrenizi mi unuttunuz?</a></div>
+                    <div class="field">
+                        <button type="submit">Giriş Yap</button>
+                    </div>
+                    {#    <div class="signup-link">Üye değil misiniz? <a href="#">Şimdi Kayıt Ol</a></div>#}
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+{% endblock %}

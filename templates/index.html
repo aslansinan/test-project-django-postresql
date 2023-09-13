@@ -1,189 +1,209 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+    {% if messages %}
+        {% for message in messages %}
+            <p class="text-white text-center bg-danger mt-2 uyari" id="hata-bastir">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+    <section id="hero-animated" class="hero-animated d-flex align-items-center">
 
-  <section id="hero-animated" class="hero-animated d-flex align-items-center">
-
-    <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-      <img src="{% static 'assets/img/hero-carousel/1.jpg.JPEG' %}" class="img-fluid animated">
-      <h2>Jengotime'a<span> Hoşgeldiniz</span></h2>
-      <p>Kalite ve güvenilirlikle işlerimizi yapıyoruz.</p>
-      <div class="d-flex">
-        <a href="#about" class="btn-get-started scrollto">Hakkımızda</a>
-{#        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>#}
-      </div>
-    </div>
-  </section>
-
-  <main id="main">
-          <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio" data-aos="fade-up">
-
-      <div class="container">
-
-        <div class="section-header">
-          <h2>Ürünlerimiz</h2>
-          <p>Aroma çeşitlerimizden istediğinizi seçip formu doldurarak alışverişi tamamlayabilirsiniz.</p>
+        <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
+             data-aos="zoom-out">
+            <img src="{% static 'assets/img/hero-carousel/1.jpg.JPEG' %}" class="img-fluid animated">
+            <h2>ihaKiralama'ya<span> Hoşgeldiniz</span></h2>
+            <p>Kalite ve güvenilirlikle işlerimizi yapıyoruz.</p>
+            <div class="d-flex">
+                <a href="#about" class="btn-get-started scrollto">Hakkımızda</a>
+                {#        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>#}
+            </div>
         </div>
+    </section>
 
-      </div>
+    <main id="main">
+        <!-- ======= Portfolio Section ======= -->
+        <section id="portfolio" class="portfolio" data-aos="fade-up">
 
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="200">
+            <div class="container">
 
-        <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
-          <div class="row g-0 portfolio-container">
-              {% for i in banner %}
-                  <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
-              <img src="{{ i.resim.url }}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>{{ i.baslik }}</h4> <h5>Fiyat:{{ i.fiyat }}</h5>
-                <a href="{{ i.resim.url }}" title="App 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-                     Ödeme <i class="bi bi-credit-card"></i>
-                    </button>
-              </div>
-            </div><!-- End Portfolio Item -->
-              {%  endfor %}
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-       <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>Hakkımızda</h2>
-          <p>Firmamız Puff ve çeşitli ürünler sektöründe hem dünya markası sayılan ürünleri,hem de yerli ürünleri bir arada sunan geniş bir ürün yelpazesine sahiptir.
- 2022 yılının başlarından bu yana tüm Türkiye’ye Elfbar ve çeşitli ürünler konusunda kaliteli ve güvenilir hizmetler sunan firmamız, sektöründe Türkiye'nin en fazla talep alan firması konumundadır ve bu yönde Türkiye'nin en büyük online puff ve çeşitli ürünler'e sahip satış mağazası olmuştur.</p>
-        </div>
-
-        <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-5">
-              <img src="{% static 'assets/img/hero-carousel/jengo.jpg' %}" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-7">
-            <h6 class="pt-0 pt-lg-5">Müşteri tercihlerinin tamamına uygun elfbar, puff çeşitleri,ve bir çok yakında gelecek olan ürün çeşitleriyle kargo teslim avantajlarıyla puff ve tüm malzemelerine kadar her ürünü ayağınıza kadar getirmektedir.
-</h6>
-
-
-            <!-- Tab Content -->
-            <div class="tab-content">
-
-              <div class="tab-pane fade show active" id="tab1">
-
-                <p class="fst-italic pt-4">Dünyaca ünlü markaların birbirinden çeşitli ürünlerinin en uygun fiyatlarla alıcı bulduğu firmamız 7 gün 24 saat hizmet prensibine uygun olarak siparişlerinizi almaktadır.</p>
-
-                <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>Orijinal ürünler</h4>
+                <div class="section-header">
+                    <h2>Ürünlerimiz</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.</p>
                 </div>
-                <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>Kaliteli Puff ve farklı ürün Çeşitleri</h4>
-                </div>
-                <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>Aynı Gün Kargo</h4>
-                </div>
-                <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>Direkt Whatsapp Online Destek</h4>
-                </div>
-                  <p class="pt-5">Firmamızın avantajları arasında yer almaktadır.</p>
-
-              </div><!-- End Tab 1 Content -->
-
-              <div class="tab-pane fade show" id="tab2">
-
-                <p class="fst-italic">Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
-
-                <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
-                </div>
-                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
-
-                <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>Incidunt non veritatis illum ea ut nisi</h4>
-                </div>
-                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
-
-                <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>Omnis ab quia nemo dignissimos rem eum quos..</h4>
-                </div>
-                <p>Eius alias aut cupiditate. Dolor voluptates animi ut blanditiis quos nam. Magnam officia aut ut alias quo explicabo ullam esse. Sunt magnam et dolorem eaque magnam odit enim quaerat. Vero error error voluptatem eum.</p>
-
-              </div><!-- End Tab 2 Content -->
-
-              <div class="tab-pane fade show" id="tab3">
-
-                <p class="fst-italic">Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
-
-                <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
-                </div>
-                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
-
-                <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>Incidunt non veritatis illum ea ut nisi</h4>
-                </div>
-                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
-
-                <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>Omnis ab quia nemo dignissimos rem eum quos..</h4>
-                </div>
-                <p>Eius alias aut cupiditate. Dolor voluptates animi ut blanditiis quos nam. Magnam officia aut ut alias quo explicabo ullam esse. Sunt magnam et dolorem eaque magnam odit enim quaerat. Vero error error voluptatem eum.</p>
-
-              </div><!-- End Tab 3 Content -->
 
             </div>
 
-          </div>
+            <div class="container-fluid" data-aos="fade-up" data-aos-delay="200">
 
-        </div>
+                <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry"
+                     data-portfolio-sort="original-order">
+                    <div class="row g-0 portfolio-container">
+                        {% for i in banner %}
+                            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+                                <img src="{{ i.resim.url }}" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <h4>{{ i.baslik }}</h4> <h5>Fiyat:{{ i.fiyat }}</h5>
+                                    <a href="{{ i.resim.url }}" title="App 1" data-gallery="portfolio-gallery"
+                                       class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#exampleModal">
+                                        Ödeme <i class="bi bi-credit-card"></i>
+                                    </button>
+                                </div>
+                            </div><!-- End Portfolio Item -->
+                        {% endfor %}
 
-      </div>
-    </section><!-- End About Section -->
+                    </div><!-- End Portfolio Container -->
+
+                </div>
+
+            </div>
+        </section><!-- End Portfolio Section -->
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-header">
+                    <h2>Hakkımızda</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
+                </div>
+
+                <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="col-lg-5">
+                        <img src="{% static 'assets/img/hero-carousel/jengo.jpg' %}" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-7">
+                        <h6 class="pt-0 pt-lg-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                        </h6>
+
+
+                        <!-- Tab Content -->
+                        <div class="tab-content">
+
+                            <div class="tab-pane fade show active" id="tab1">
+
+                                <p class="fst-italic pt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
+
+                                <div class="d-flex align-items-center mt-4">
+                                    <i class="bi bi-check2"></i>
+                                    <h4>Lorem Ipsum is</h4>
+                                </div>
+                                <div class="d-flex align-items-center mt-4">
+                                    <i class="bi bi-check2"></i>
+                                    <h4>Lorem Ipsum is simply dummy text of the printing a</h4>
+                                </div>
+                                <div class="d-flex align-items-center mt-4">
+                                    <i class="bi bi-check2"></i>
+                                    <h4>Lorem Ipsum is</h4>
+                                </div>
+                                <div class="d-flex align-items-center mt-4">
+                                    <i class="bi bi-check2"></i>
+                                    <h4>Lorem Ipsum is ds</h4>
+                                </div>
+                                <p class="pt-5">Lorem Ipsum is simply dummy.</p>
+
+                            </div><!-- End Tab 1 Content -->
+
+                            <div class="tab-pane fade show" id="tab2">
+
+                                <p class="fst-italic">Consequuntur inventore voluptates consequatur aut vel et. Eos
+                                    doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo
+                                    suscipit voluptatem.</p>
+
+                                <div class="d-flex align-items-center mt-4">
+                                    <i class="bi bi-check2"></i>
+                                    <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
+                                </div>
+                                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi
+                                    dolorum non eveniet magni quaerat nemo et.</p>
+
+                                <div class="d-flex align-items-center mt-4">
+                                    <i class="bi bi-check2"></i>
+                                    <h4>Incidunt non veritatis illum ea ut nisi</h4>
+                                </div>
+                                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta
+                                    tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at.
+                                    Dolorem quo tempora. Quia et perferendis.</p>
+
+                                <div class="d-flex align-items-center mt-4">
+                                    <i class="bi bi-check2"></i>
+                                    <h4>Omnis ab quia nemo dignissimos rem eum quos..</h4>
+                                </div>
+                                <p>Eius alias aut cupiditate. Dolor voluptates animi ut blanditiis quos nam. Magnam
+                                    officia aut ut alias quo explicabo ullam esse. Sunt magnam et dolorem eaque magnam
+                                    odit enim quaerat. Vero error error voluptatem eum.</p>
+
+                            </div><!-- End Tab 2 Content -->
+
+                            <div class="tab-pane fade show" id="tab3">
+
+                                <p class="fst-italic">Consequuntur inventore voluptates consequatur aut vel et. Eos
+                                    doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo
+                                    suscipit voluptatem.</p>
+
+                                <div class="d-flex align-items-center mt-4">
+                                    <i class="bi bi-check2"></i>
+                                    <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
+                                </div>
+                                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi
+                                    dolorum non eveniet magni quaerat nemo et.</p>
+
+                                <div class="d-flex align-items-center mt-4">
+                                    <i class="bi bi-check2"></i>
+                                    <h4>Incidunt non veritatis illum ea ut nisi</h4>
+                                </div>
+                                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta
+                                    tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at.
+                                    Dolorem quo tempora. Quia et perferendis.</p>
+
+                                <div class="d-flex align-items-center mt-4">
+                                    <i class="bi bi-check2"></i>
+                                    <h4>Omnis ab quia nemo dignissimos rem eum quos..</h4>
+                                </div>
+                                <p>Eius alias aut cupiditate. Dolor voluptates animi ut blanditiis quos nam. Magnam
+                                    officia aut ut alias quo explicabo ullam esse. Sunt magnam et dolorem eaque magnam
+                                    odit enim quaerat. Vero error error voluptatem eum.</p>
+
+                            </div><!-- End Tab 3 Content -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End About Section -->
 
         <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ödeme</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      </div>
-    </div>
-  </div>
-</div>
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-header">
-          <h2>İletişim</h2>
-          <p>Www.jengotime.com firmamızın resmi internet adresine girerek ürün fiyatlarımız ve teslimat şartlarımız hakkında bilgi alabilirsiniz.
-Soru ve önerileriniz için destek@jengotime.com e-mail adresimizden bizimle irtibat kurabilirsiniz.</p>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ödeme</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                </div>
+            </div>
         </div>
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container">
 
-      </div>
+                <div class="section-header">
+                    <h2>İletişim</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.</p>
+                </div>
 
-    </section><!-- End Contact Section -->
+            </div>
 
-  </main><!-- End #main -->
+        </section><!-- End Contact Section -->
+    </main><!-- End #main -->
 {% endblock %}

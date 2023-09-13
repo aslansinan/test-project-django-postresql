@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Jengotime</title>
+  <title>iHA Kiralama</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -72,7 +72,7 @@
       <a href="/" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>Jengotime<span></span></h1>
+        <h1>İha Kiralama<span></span></h1>
       </a>
 
       <nav id="navbar" class="navbar">
@@ -80,6 +80,13 @@
           <li><a >Anasayfa</a></li>
           <li><a class="nav-link scrollto" href="index.html#about">Hakkımızda</a></li>
           <li><a class="nav-link scrollto" href="index.html#contact">İletişim</a></li>
+          {% if not request.user.is_authenticated %}
+               <li><a class="nav-link scrollto" href="{% url 'login' %}">Giriş Yap</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'register' %}">Kayıt Ol</a></li>
+          {% else %}
+               <li><a class="nav-link scrollto" href="{% url 'logout' %}">Çıkış Yap</a></li>
+          {% endif %}
+
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->

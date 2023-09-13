@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="signup" class="signup">
+        <div class="container">
+
+            <div class="section-header">
+                <h2>Kayıt Ol</h2>
+                {% load static %}
+                <form method="POST" action="/account/register" class="signup" id="sign-up-form">
+                    {% csrf_token %}
+                    <div class="field">
+                        <input type="email" name="email" class="form-control" placeholder="E-mail" required
+                               id="id_email">
+                    </div>
+                    <div class="field">
+                        <input type="text" name="isim_soyisim" class="form-control" placeholder="İsim-Soyisim"
+                               required id="id_isim">
+                    </div>
+                    <div class="field">
+                        <input type="tel" maxlength="15" name="cep_telefonu" class="form-control"
+                               placeholder="Telefon: 555-555-5555"
+                               oninput="this.value = this.value.replace(/^0/g, '');" required id="id_cep_telefonu">
+                    </div>
+                    <div class="field">
+                        <input type="password" name="password" class="form-control" placeholder="Parola" required
+                               id="id_password">
+                    </div>
+                    <div class="field">
+                        <button type="submit">Kayıt Ol</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+{% endblock %}
