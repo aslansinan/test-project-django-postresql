@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="login" class="login">
+        <div class="container">
+            {% for i in ihalar %}
+                <div class="section-header">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{{ i.resim.url }}" alt="">
+                        <div class="card-body">
+                            <p class="card-text">{{ i.iha }}.</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </section>
+{% endblock %}

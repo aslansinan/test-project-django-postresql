@@ -14,11 +14,6 @@ from account import forms
 from account.forms import UyeKayitFormu
 from account.models import Uye
 
-
-def indexaccount(request):
-    return render(request, 'account/index.html')
-
-
 def login_request(request):
     if request.method == 'POST':
         form = forms.LoginForm(request.POST)  # POST verileri ile formu oluşturun
