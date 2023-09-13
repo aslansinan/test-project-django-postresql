@@ -87,7 +87,7 @@ def forget_password(request):
         encoded = base64.b64encode(str(uye_email).encode('ascii'))
         formatlama = str(encoded).replace("'", "/")[1:]
         # url = "http://127.0.0.1:8000/account/mail/change-password" + formatlama
-        url = "https://penfest.com.tr/account/mail/change-password" + formatlama
+        url = "https://http://127.0.0.1:8000/account/mail/change-password" + formatlama
         mail_dict["hashed_url"] = url
         html_content = render_to_string('email-icerikleri/sifre-degistirme-mail.html', mail_dict)
         text_content = strip_tags(html_content)
@@ -102,4 +102,4 @@ def forget_password(request):
         messages.success(request, "Şifre Sıfırlama Mailiniz Gönderildi...")
         return redirect("index")
     else:
-        return render(request, "account/sifremi_unuttum.html")
+        return render(request, "sifremi_unuttum.html")

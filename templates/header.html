@@ -84,6 +84,8 @@
                <li><a class="nav-link scrollto" href="{% url 'login' %}">Giriş Yap</a></li>
               <li><a class="nav-link scrollto" href="{% url 'register' %}">Kayıt Ol</a></li>
           {% else %}
+               <li><a class="nav-link scrollto" href="{% url 'ihalar' %}">İhalar</a></li>
+               <li><a class="nav-link scrollto" href="{% url 'ihalarim' %}">Kiraladıklarım</a></li>
                <li><a class="nav-link scrollto" href="{% url 'logout' %}">Çıkış Yap</a></li>
           {% endif %}
 

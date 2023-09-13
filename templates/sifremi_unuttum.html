@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="login" class="login">
+        <div class="container">
+
+            <div class="section-header">
+                <h2>Giriş Yap</h2>
+                {% load static %}
+                <form method="POST" action="{% url 'forget-password' %}">
+                    {% csrf_token %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p class="text-white text-center bg-danger mt-2 uyari" id="hata-bastir">{{ message }}</p>
+                        {% endfor %}
+                    {% endif %}
+
+                    <div class="field pb-3">
+                        <input type="email" name="email" class="form-control" placeholder="Emailinizi Giriniz..." required >
+                    </div>
+
+                    <div class="field align-items-center pt-3 pb-4">
+                        <button class="kayit-ol-buton" type="submit">Mail Gönder</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+{% endblock %}
