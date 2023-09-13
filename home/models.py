@@ -1,10 +1,6 @@
 from django.db import models
 
 from account.models import Uye
-
-
-
-
 class Kategoriler(models.Model):
     kategori_adi = models.CharField(max_length=50,null=True,blank=True)
     olusturma_tarihi = models.DateTimeField(auto_now_add=True)
@@ -22,7 +18,7 @@ class İhalarModel(models.Model):
     kategori = models.ForeignKey(Kategoriler, on_delete=models.PROTECT, blank=True, null=False)
     marka=models.CharField(max_length=50,null=True,blank=True)
     model=models.CharField(max_length=50,null=True,blank=True)
-    fiyat = models.IntegerField(max_length=50,null=True,blank=True)
+    fiyat = models.IntegerField(null=True,blank=True)
     resim = models.ImageField(upload_to='img/', null=True, blank=True)
     olusturma_tarihi = models.DateTimeField(auto_now_add=True)
     guncelleme_tarihi = models.DateTimeField(auto_now=True)

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="login" class="login">
+        {% if messages %}
+            {% for message in messages %}
+                <p class="text-white text-center bg-danger mt-2 uyari" id="hata-bastir">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+        <div class="container" style="padding-top: 50px">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">İha</th>
+                    <th scope="col">Kullanıcı</th>
+                    <th scope="col">Kategori</th>
+                    <th scope="col">Marka</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for i in ihalarim %}
+                    <tr>
+                        <th scope="row">{{ i.id }}</th>
+                        <td>{{ i.ihalar }}</td>
+                        <td>{{ i.uye }}</td>
+                        <td>{{ i.ihalar.kategori }}</td>
+                        <td>{{ i.ihalar.marka }}</td>
+                        <td style="display: inline-block; margin: 0 auto;">
+                            <a href="{% url 'guncelle_ihala' i.id %}" class="btn btn-success">Güncelle</a>
+                        </td>
+                        <td style="display: inline-block; margin: 0 auto;">
+                            <a href="{% url 'sil_ihala' i.id %}" class="btn btn-danger">Sil</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+{% endblock %}

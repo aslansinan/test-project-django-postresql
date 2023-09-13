@@ -3,18 +3,34 @@
 
 {% block content %}
     <section id="login" class="login">
-        <div class="container">
-            {% for i in ihalar %}
-                <div class="section-header">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{{ i.resim.url }}" alt="">
-                        <div class="card-body">
-                            <p class="card-text">{{ i.iha }}.</p>
+        {% if messages %}
+            {% for message in messages %}
+                <p class="text-white text-center bg-danger mt-2 uyari" id="hata-bastir">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+        <div class="container" style="padding-top: 50px">
+            <div class="row">
+                {% for i in ihalar %}
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ i.iha }}</h5>
+                                <p class="card-text">Kategori:{{ i.kategori }}</p>
+                                <p>Model:{{ i.model }}</p>
+                                <form method="post" action="{% url 'ihalar' %}">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="ihaid" value="{{ i.id }}">
+                                    <button type="submit" class="btn btn-primary">Kirala</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
+                    {% if forloop.counter|divisibleby:4 %}
+                        </div>
+                        <div class="row">
+                    {% endif %}
+                {% endfor %}
                 </div>
-            {% endfor %}
         </div>
-
     </section>
 {% endblock %}

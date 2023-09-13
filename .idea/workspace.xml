@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5fc4bfb7-0028-4e56-8583-5450f24c9197" name="Changes" comment="step one template added to projectstep one template added to project">
-      <change afterPath="$PROJECT_DIR$/templates/ihalar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/guncelle_ihala.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ihalarim.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ihalar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ihalar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -45,7 +49,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/aslan/OneDrive/Masaüstü/BaykarProject/ihaKiralama/static",
+    "last_opened_file_path": "C:/Users/aslan/OneDrive/Masaüstü/BaykarProject/ihaKiralama/templates",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,8 +60,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\aslan\OneDrive\Masaüstü\BaykarProject\ihaKiralama\static" />
       <recent name="C:\Users\aslan\OneDrive\Masaüstü\BaykarProject\ihaKiralama\templates" />
+      <recent name="C:\Users\aslan\OneDrive\Masaüstü\BaykarProject\ihaKiralama\static" />
       <recent name="C:\Users\aslan\OneDrive\Masaüstü\BaykarProject\ihaKiralama" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -105,7 +109,10 @@
       <workItem from="1694434882170" duration="5179000" />
       <workItem from="1694516462940" duration="1707000" />
       <workItem from="1694587806729" duration="65000" />
-      <workItem from="1694603405176" duration="11123000" />
+      <workItem from="1694603405176" duration="12796000" />
+      <workItem from="1694629896971" duration="2070000" />
+      <workItem from="1694632105080" duration="22000" />
+      <workItem from="1694632149222" duration="2927000" />
     </task>
     <servers />
   </component>
@@ -134,6 +141,16 @@
           <url>file://$PROJECT_DIR$/account/views.py</url>
           <line>69</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/home/views.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/home/views.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

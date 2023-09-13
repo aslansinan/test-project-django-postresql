@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="login" class="login">
+        <div class="container" style="padding-top: 50px">
+            <form method="POST" action="{% url 'guncelle_ihala' iha.id %}">
+                {% csrf_token %}
+                <label for="ihalar">İhalar:</label>
+                <select id="ihalar" name="ihalar">
+                    {% for ihala in ihalar %}
+                        <option value="{{ ihala.pk }}"
+                                {% if ihala == iha.ihalar %}selected{% endif %}>{{ ihala.iha }}</option>
+                    {% endfor %}
+                </select>
+
+                <label for="uye">Üye:</label>
+                <select id="uye" name="uye">
+                    {% for uye in uyeler %}
+                        <option value="{{ uye.pk }}"
+                                {% if uye == iha.uye %}selected{% endif %}>{{ uye.email }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="btn btn-success">Güncelle</button>
+            </form>
+        </div>
+    </section>
+{% endblock %}
